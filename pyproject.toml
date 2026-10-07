@@ -3,7 +3,7 @@ requires = ["hatchling>=1.27"]
 build-backend = "hatchling.build"
 
 [project]
-name = "gnews-io"
+name = "gnews-io-python"
 dynamic = ["version"]
 description = "Official Python client for the GNews API: search news articles and top headlines from 80,000+ sources."
 readme = "README.md"

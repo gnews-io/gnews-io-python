@@ -11,10 +11,10 @@ Official Python client for the [GNews API](https://gnews.io): search news articl
 ## Installation
 
 ```bash
-pip install gnews-io
+pip install gnews-io-python
 ```
 
-Note: the `gnews` package on PyPI is an unrelated Google News scraper. This client is `gnews-io`, imported as `gnews_io`.
+Note: `gnews` on PyPI is an unrelated Google News scraper and `gnewsio` is an unofficial client. The official client is `gnews-io-python`, imported as `gnews_io`.
 
 ## Quick start
 

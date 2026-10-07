@@ -1,0 +1,23 @@
+name: Publish
+
+on:
+  push:
+    tags: ["v*"]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+      - run: pip install -e . build
+      - run: python -m unittest discover
+      - run: python -m build
+      - name: Check that the tag matches the package version
+        run: ls dist/*-"${GITHUB_REF_NAME#v}"-py3-none-any.whl
+      - uses: pypa/gh-action-pypi-publish@release/v1
