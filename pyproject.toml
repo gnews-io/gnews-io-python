@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gnews-io"
+dynamic = ["version"]
+description = "Official Python client for the GNews API: search news articles and top headlines from 80,000+ sources."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "GNews API", email = "contact@gnews.io" }]
+keywords = ["gnews", "news", "news api", "headlines", "articles", "sdk"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Internet :: WWW/HTTP",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.2",
+    "mypy>=1.11",
+]
+
+[project.urls]
+Homepage = "https://gnews.io"
+Documentation = "https://docs.gnews.io"
+Repository = "https://github.com/gnews-io/gnews-io-python"
+
+[tool.hatch.version]
+path = "src/gnews_io/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/tests", "/README.md", "/LICENSE", "/CHANGELOG.md"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gnews_io"]
+
+[tool.mypy]
+python_version = "3.10"
+files = ["src/gnews_io"]
+strict = true
