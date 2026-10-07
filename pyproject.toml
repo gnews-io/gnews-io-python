@@ -13,7 +13,7 @@ license-files = ["LICENSE"]
 authors = [{ name = "GNews API", email = "contact@gnews.io" }]
 keywords = ["gnews", "news", "news api", "headlines", "articles", "sdk"]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",

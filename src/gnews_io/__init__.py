@@ -13,7 +13,7 @@ from dataclasses import dataclass, field
 from datetime import date, datetime, timezone
 from typing import Any, Callable, Iterable, Iterator, Literal, Union
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 
 __all__ = [
     "GNews",
